@@ -1,0 +1,128 @@
+/* font style  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* =========common style=========  */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#FFFFFF;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: #FFFFFF;
+    width: 90%;
+    padding: 20px;
+    margin-top: 21px;
+    border-radius: 5px;
+
+    border: 1px solid;
+}
+
+
+/* ===========header style start======*/
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header .header-content{   
+    width: 90%;
+    display: flex;
+    padding: 20px;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between; 
+
+
+
+    border: 2px solid ;
+}
+.influ-prdt{
+    display: flex;
+    align-items: center;
+}
+.influ-prdt p{
+    font-size: 20px;
+    color:black;
+    font-weight: 700;
+    margin-left: 0px;
+}
+/* ------------- */
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 36px;
+}
+nav ul li:hover> a{
+    background-color: rgb(240, 240, 230);
+    border-radius: 10px;
+    color: rgb(109, 104, 102);
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+/* ====Header style End ====== */
+
+/* ==========================
+    main section start
+============================= */
+
+/*------Influencer section ----- */
+.influencer{
+    display: flex;
+    height: 500px;
+}
+/* .influencer-section{
+    display: flex;
+    width: 90%;
+} */
+.influencer-about{
+    width: 50%;
+    margin-left: 120px;
+    width: 580px;
+    height: 270px;
+}
+.influencer-about h1 {
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 45px;
+line-height: 70px;
+ }
+ .Preebook-btn{
+    width: 150px;
+    background: #E02C6D;
+    padding: 10px 24px;
+    border-radius: 40px;
+ }
+ .Preebook-btn a{
+    text-decoration: none;
+    color: white;
+ }
+ .Preebook-btn i{
+     color: white;
+     margin-left: 5px;
+ }
+
+.influencer-img{
+    width: 50%;
+   
+}
+.influencer-img img{
+    position: absolute;
+    width: 440px;
+    height: 414px;  
+    margin-left: 100px;
+}
