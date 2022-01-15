@@ -18,7 +18,7 @@ main{
     margin-top: 21px;
     border-radius: 5px;
 
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 
@@ -36,10 +36,7 @@ main{
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between; 
-
-
-
-    border: 2px solid ;
+    /* border: 2px solid ; */
 }
 .influ-prdt{
     display: flex;
