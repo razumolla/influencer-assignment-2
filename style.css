@@ -46,7 +46,7 @@ main{
     align-items: center;
 }
 .influ-prdt p{
-    font-size: 20px;
+    font-size: 24px;
     color:black;
     font-weight: 700;
     margin-left: 0px;
@@ -73,24 +73,19 @@ nav ul li a{
     color: black;
     padding: 10px;
 }
-/* ====Header style End ====== */
-
 /* ==========================
     main section start
 ============================= */
 
 /*------Influencer section ----- */
 .influencer{
-    display: flex;
-    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 420px;
 }
-/* .influencer-section{
-    display: flex;
-    width: 90%;
-} */
 .influencer-about{
     width: 50%;
-    margin-left: 120px;
+    margin-left: 5px;
     width: 580px;
     height: 270px;
 }
@@ -126,3 +121,99 @@ line-height: 70px;
     height: 414px;  
     margin-left: 100px;
 }
+/*------Influencer section End----- */
+
+/*---- logo section start-----  */
+.logos{
+   height: 125px;
+   align-items: center;
+   flex-direction: column;
+  border-top:3px solid #f1e9e9;
+  border-bottom:3px solid #f1e9e9;
+}
+.logo{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.logo img{
+    width: 120px;
+    height: 60px;
+}
+/*------Logo Section end----- */
+
+/* =========Popular Collection ====== */
+.popular-collection-title{
+    margin-top: -5px;
+    text-align: center;
+}
+.all-collections{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px; 
+}
+
+.collection{
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 20px;
+    width: 320px;
+    height: 475px;  
+    padding: 15px;
+    border: 1px solid;
+}
+/* me  */
+.collection-banner img {
+    width: 100%;
+    height: 256px;
+}
+.collection-details{
+
+}
+.collection-title{
+    font-size: 28px;
+    margin: 0;
+}
+.collection-price{
+    font-size: 20px;
+    margin: 0;
+}
+.collection-star{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.rating{
+    margin-left: 10px;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color:#FFC014;
+}
+.fa-star.empty{
+    color:#AEAEAE;
+}
+.collection-info{
+    font-size: 15px;
+}
+
+/* ------- */
+.see-more-btn{
+    float: right;
+    width: 120px;
+    /* background: #e7dee0; */
+    padding: 10px 24px;
+    border-radius: 40px;
+ }
+ .see-more-btn a{
+    text-decoration: none;
+    color: #e60e5d;
+ }
+ .see-more-btn i{
+     color: #e71461;
+     margin-left: 5px;
+ }
