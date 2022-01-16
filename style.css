@@ -10,6 +10,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* margin-top: 110px; */
 }
 .container{
     background-color: #FFFFFF;
@@ -19,31 +20,36 @@ main{
     border-radius: 5px;
 }
 
-
 /* ===========header style start======*/
 .header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
 }
-.header .header-content{   
+.header-content{   
     width: 90%;
     display: flex;
     padding: 20px;
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between; 
+
+    /* position: fixed;
+    background-color: #f6f6f6; */
 }
-.influ-prdt{
+.Influencer-product{
     display: flex;
     align-items: center;
 }
-.influ-prdt p{
+.Influencer-product p{
     font-size: 24px;
     color:black;
     font-weight: 700;
-    margin-left: 0px;
+    margin-left: 20px;
+}
+.Influencer-product i{
+    font-size: 26px;
 }
 /* ------------- */
 nav{
@@ -58,38 +64,42 @@ nav ul li{
     margin-right: 36px;
 }
 nav ul li:hover> a{
-    background-color: rgb(240, 240, 230);
+    /* background-color: rgb(255, 255, 245); */
     border-radius: 10px;
-    color: rgb(109, 104, 102);
+    color:#E02C6D;
+    cursor:progress;
+}
+nav ul li:hover> i{
+    border-radius: 10px;
+    color: rgb(12, 12, 0);
+    cursor: progress;
 }
 nav ul li a{
     text-decoration: none;
     color: black;
     padding: 10px;
 }
+
+
 /* ==========================
     main section start
 ============================= */
 
 /*------Influencer section ----- */
+.influencer-about h1 {
+    font-size: 45px;
+ }
 .influencer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 420px;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
 }
 .influencer-about{
-    width: 50%;
-    margin-left: 5px;
-    width: 580px;
-    height: 270px;
+    width: 50%;  
+    /* width: 580px; */
 }
-.influencer-about h1 {
-    font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 45px;
-line-height: 70px;
- }
+
+
  .Preebook-btn{
     width: 150px;
     background: #E02C6D;
@@ -107,14 +117,29 @@ line-height: 70px;
 
 .influencer-img{
     width: 50%;
-   
+    position: relative;
+    /* width: 580px; */
 }
+
 .influencer-img img{
-    position: absolute;
+    width: 95%;
     width: 440px;
     height: 414px;  
     margin-left: 100px;
 }
+.main-camera{
+    position: absolute;
+    top: 0px;
+
+}
+
+.influencer-img:hover .main-camera {
+    transform: scale(1.2);
+    transition: transform 2s ease-in-out;
+}
+
+
+
 /*------Influencer section End----- */
 
 /*---- logo section start-----  */
@@ -155,6 +180,10 @@ line-height: 70px;
     width: 320px;
     height: 475px;  
     padding: 15px;
+}
+.collection-banner:hover img {
+    transform: scale(1.05);
+    transition: transform 2s ease-in-out;
 }
 .collection-banner img {
     width: 100%;
@@ -206,11 +235,6 @@ line-height: 70px;
      margin-left: 5px;
  }
 
-
-
-
-
-
 /* extra section */
 
 .newsletter {
@@ -252,9 +276,6 @@ line-height: 70px;
      margin-left: 10px;
  }
 
-
-
-
   /* ====== Footer section====== */
   .foot {
     padding: 20px;
@@ -264,9 +285,84 @@ line-height: 70px;
 .foot h2,h4{
     color: #f5f1f1;
 }
-.foot-icon {
+.foot-icon a{
     color: azure;
     font-size: 24px;
     padding-left: 20px;
 }
 
+/*=========================*\
+       media Query
+\*==========================*/
+
+/*--- Mobile Device --- */
+@media only screen and (max-width:688px) {
+    .container ,.influencer, .foot, .container{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .influencer-about> h1{
+        font-size: 20px;
+     }
+    .Influencer-product p{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .influencer{
+        display: flex;
+        flex-direction: column;
+    }
+    .influencer-img img{
+        width: 100%;
+        width: 440px;
+        height: 414px;  
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+   
+    .all-collections{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .collection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logos{
+        height: 300px;
+    }
+    .logo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap:10px ;
+    } 
+    nav li a{
+        display: none;
+    }
+}
+
+ /*------tablet devices----- */
+  @media only screen and (min-width:689px) and (max-width:922px) {
+    .container ,.influencer, .foot, .container{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .all-collections{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .collection{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logos{
+        height: 200px;
+    }
+    .logo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap:10px ;
+    } 
+    nav li a {
+        display: none;
+    }
+}
